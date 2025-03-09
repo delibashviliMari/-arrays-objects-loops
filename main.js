@@ -1,16 +1,16 @@
 function findYoungestUser(users) {
-    let youngest = users[0]; // Assume first user is the youngest
+    let youngest = users[0];
 
     for (let i = 1; i < users.length; i++) {
         if (users[i].age < youngest.age) {
-            youngest = users[i]; // Update youngest user
+            youngest = users[i];
         }
     }
 
-    return youngest.name; // Return only the name
+    return youngest.name;
 }
 
-// Example usage
+
 const users = [
     { name: 'Temo', age: 25 },
     { name: 'Lasha', age: 21 },
@@ -18,7 +18,7 @@ const users = [
 ];
 
 console.log("Exercise 1");
-console.log(findYoungestUser(users)); // Output: Lasha
+console.log(findYoungestUser(users));
 console.log(" ");
 
 
@@ -26,21 +26,21 @@ console.log(" ");
 
 
 function cloneUser(user) {
-    return { ...user }; // Spread operator to copy properties
+    return { ...user }; 
 }
 
-// Example usage
+
 const originalUser = { name: 'Temo', age: 25 };
 const clonedUser = cloneUser(originalUser);
 
 console.log("Exercise 2");
-console.log(clonedUser); // Output: { name: 'Temo', age: 25 }
-console.log(originalUser === clonedUser); // Output: false (they are different objects)
+console.log(clonedUser); 
+console.log(originalUser === clonedUser); 
 
 
 
 function rollDiceGame() {
-    let rollsA = 0, rollsB = 0; // Counters for attempts
+    let rollsA = 0, rollsB = 0; 
     let foundA = false, foundB = false;
 
     while (!foundA || !foundB) {
@@ -70,5 +70,4 @@ function rollDiceGame() {
     }
 }
 
-// Run the game
 rollDiceGame();
